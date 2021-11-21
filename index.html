@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font-Icons-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Weather Cast</title>
+  </head>
+  <body>
+    <!--This is current weather -->
+    <div class="container">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-5 current-weather">
+            <h1 class="city"><span id="city-display">Manila</span> ⛅</h1>
+            <div id="temperature-display">
+              <p id="temperature-number">30</p>
+              <label for="degree" class="degree-celsius-fahrenheit"
+                ><span class="celsius">ºC</span> |
+                <span class="fahrenheit">ºF</span></label
+              >
+              <input type="checkbox" id="degree" name="degree" />
+            </div>
+            <span id="weather-description">Weather description</span>
+            <br />
+            <time id="current-date"></time>
+            <!-- id en spans, cambiar texto ciudad y temperatura// Cº|Fº (función event click) -->
+          </div>
+          <div class="col-5 weather-info">
+            <ul>
+              <li id="maxMin">Maxº / Minº</li>
+              <li id="feelsLike">Feels like</li>
+              <hr />
+              <li id="humidity">Humidity</li>
+              <li id="wind">Wind</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--This is the end of current weather. Starts daily weather forecast-->
+      <div class="weather-forecast" id="daily-forecast"></div>
+      <!--This is the search bar-->
+      <div class="row">
+        <div class="col-6">
+          <div class="search-bar">
+            <div class="search-container">
+              <input
+                type="text"
+                name="search"
+                placeholder="Enter a city..."
+                class="search-input"
+                id="search-input"
+              />
+              <a href="#" class="search-btn"> <i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <button id="current-location">
+            Current <i class="fas fa-map-marker-alt location-icon"></i>
+          </button>
+        </div>
+      </div>
+      <footer>
+        <div class="coder">
+          <p>
+            <a
+              href="https://github.com/Ren-mayday/Weather-Forecast-Beta-JS"
+              target="_blank"
+              >Open-sourced code on GitHub,</a
+            >
+            coded by Rencel Dayrit
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
