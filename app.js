@@ -167,8 +167,7 @@ function updateDailyForecast(day) {
             ).toLocaleString("es-ES", { weekday: "short" })}</div>
             <p>☀</p>
               <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max"> 20º </span>
-                <span class="weather-forecast-temperature-min"> 14º </span>
+                <span class="class="weather-forecast-temperature-max">20º/</span><span class="weather-forecast-temperature-min">14º</span>
               </div>
           </div>`;
   const rowElement = document.createElement("div");
