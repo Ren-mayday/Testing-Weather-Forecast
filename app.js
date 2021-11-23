@@ -35,7 +35,7 @@ function getForecastData(coords) {
     })
     .then((json) => json.data)
     .then((data) => {
-      const dailyData = data.daily.slice(1, 5);
+      const dailyData = data.daily.slice(1, 6);
       dailyData.forEach((day) => {
         console.log(day);
         updateDailyForecast(day);
@@ -166,10 +166,10 @@ function updateDailyForecast(day) {
               day.dt * 1000
             ).toLocaleString("es-ES", { weekday: "short" })}</div>
             <p>☀</p>
-            <div class="weather-forecast-temperature">
-              <span class="weather-forecast-temperature-max"> 20º </span>
-              <span class="weather-forecast-temperature-min"> 14º </span>
-            </div>
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max"> 20º </span>
+                <span class="weather-forecast-temperature-min"> 14º </span>
+              </div>
           </div>`;
   const rowElement = document.createElement("div");
   rowElement.className = "col-2";
